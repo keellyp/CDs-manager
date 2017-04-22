@@ -1,10 +1,15 @@
-<header>
+<header class="sidebar">
     <nav>
-        <ul>
-            <li><a href="_dashboard.php">Tableau de bord</a></li>
-            <li><a href="_inventory.php">Mon inventaire</a></li>
-            <li><a href="_disconnect.php">Déconnexion</a></li>
-
-        </ul>
+        <div class="logo">
+            <a href="dashboard">CD MANAGER</a>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="export">Export CSV</a></li>
+                <li><a href="theme">Other theme</a></li>
+                <li><a href="disconnect">Disconnect</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
+<div class="clearboth"></div>

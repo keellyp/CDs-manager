@@ -1,8 +1,5 @@
 .container
 {
-    width: 100vw;
-    height: 100vh;
-
     &.vertical-center
     {
         display: flex;
@@ -39,12 +36,6 @@
                     input:not([type=submit])
                     {
                         flex-grow: 2;
-                    }
-                    input
-                    {
-                        border-bottom-style: inset;
-                        border-bottom-width: thin;
-                        padding: 1em;
                     }
                     &.submit
                     {

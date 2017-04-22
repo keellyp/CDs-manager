@@ -14,7 +14,7 @@
                     </p>
                     <p>
                         <label for="password">password : </label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" autocomplete="off">
                     </p>
                     <?php if(!empty($error_messages)): ?>
                         <div class="error"><p><?= $error_messages ?></p></div>

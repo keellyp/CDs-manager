@@ -1,116 +1,163 @@
-.dashboard
+.container
 {
-    width : 100vw;
-    height : 100vh;
-    display: flex;
+    &.column
+    {
+        display: flex;
+        flex-direction: row;
 
-        header
+        .container-dashboard
         {
-            display: flex;
-            flex-grow: 0;
-            background-color: $main-color;
-            color : $text-light;
-            font-size: 10px;
-            width: 150px;
+            background-color: $bg-color;
+            width: calc(100vw - 120px);
+            margin-left: 120px;
 
-            nav
+            .dashboard-intro
             {
-                margin-top: 10em;
-                li
+                display: inline-flex;
+                align-items: baseline;
+                margin: 3rem;
+                position: relative;
+
+                h1
                 {
-                    &:hover
+                    padding-right: 1rem;
+                }
+
+                .border
+                {
+                    position: absolute;
+                    border-bottom: thin solid $text-dark;
+                    height: 1px;
+                    width: 105%;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            .dashboard-products
+            {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 0 2rem;
+
+                .product
+                {
+                    background-color: $second-color;
+                    padding: 1rem;
+                    margin: 1rem;
+
+                    .product-info
                     {
-                        background-color: $main-color;
-                    }
-                    a
-                    {
-                        display: block;
-                        padding: 3em;
+                        .container-edit
+                        {
+                            padding: 1rem 0;
+
+                            div
+                            {
+                                padding: 0.4rem 0;
+                            }
+                            #description
+                            {
+                                resize: none;
+                                width: 100%;
+                                height: 7rem;
+                                padding: 1rem;
+                                line-height: 1.3em;
+                            }
+                            .button-info
+                            {
+                                text-align: right;
+
+                                input
+                                {
+                                    background: none;
+                                    border: none;
+                                    color: $main-color;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
                     }
                 }
             }
-        }
-
-    section
-    {
-        display: flex;
-        flex-grow: 1;
-
-        .container-dashboard{
-            padding: 5em;
-            width: 100%;
-
-            h1
+            .dashboard-form
             {
-                font-size: 28px;
-                font-weight: bold;
-            }
+                display: block;
+                position: fixed;
+                top: 100%;
+                left: 0;
+                background-color: $text-light;
+                box-shadow: 0px -4px 15px -5px rgba(117,117,117,0.54);
+                transition: 0.4s transform ease-in-out;
+                transform-origin: bottom;
+                width: 100%;
 
-            .button-add
-            {
-                display: flex;
-                justify-content: center;
-                padding: 4em 0;
-                font-size: 12px;
+                &.animation-show { transform: translateY(-100%); }
+                &.animation-hide { transform: translateY(100%); }
 
-                .add
+                .form-exit
                 {
-                    margin: 2em;
-                    border: 1px solid $main-color;
-                    height: 40vh;
-                    width: 20vw;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    color: $main-color;
+                    text-align: right;
 
-                    &:hover
+                    i
                     {
-                        background-color: $main-color;
-                        color: $text-light;
-                        box-shadow: 5px 5px 80px -15px #272727;
+                        color: $main-color;
+                        font-size: 14px;
+                        cursor: pointer;
+                        padding: 0.8rem 1rem;
                     }
-                    a
-                    {
-                        width: 100%;
-                        height: 100%;
+                }
 
-                        p
+                .container-edit
+                {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 0 1rem;
+
+                    div
+                    {
+                        padding: 0.8rem 1rem;
+
+                        input[id="name"]
                         {
-                            display: flex;
-                            justify-content: center;
-                            height: 100%;
-                            align-items: center;
+                            width: 20em;
+                        }
+                        input[id="description"]
+                        {
+                            width: 30rem;
+                        }
+                        input[id="price"], input[id="stock"]
+                        {
+                            width: 3rem;
                         }
                     }
 
                 }
             }
 
-            .resume
+            .button-add-product
             {
-                background-color: $text-light;
-                width : 100%;
-                height : 20vh;
-                padding: 1em 3em;
+                width: 14em;
+                height: 3em;
+                background-color: $main-color;
+                position: fixed;
+                right: 0;
+                top: 75vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: skew(-20deg, 0deg);
+                margin-right: -10px;
+                transition: transform 0.2s ease-in-out;
+                cursor: pointer;
 
-                h2
+                &:hover
                 {
-                    font-weight: bold;
-                    font-size: 14px;
-                    padding: 1em 0;
+                    transform: skew(0deg, 0deg);
+                    margin-right: -10px;
                 }
-                p
-                {
-                    padding: 5px;
-
-                    .resume-link
-                    {
-                        text-decoration: underline;
-                        color: $main-color;
-                    }
-                }
+                p { color: $text-light; }
             }
         }
     }
