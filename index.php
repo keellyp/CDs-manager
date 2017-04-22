@@ -25,6 +25,4 @@ else
     $page = '404';
 }
 
-include 'dist/views/partials/header.php';
 include 'dist/views/pages/'.$page.'.php';
-include 'dist/views/partials/footer.php';

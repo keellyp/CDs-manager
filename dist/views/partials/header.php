@@ -1,8 +1,3 @@
-<?php
-
-    include('dist/views/handle_form.php');
-
-?>
 <!DOCTYPE html>
 <html>
     <head>

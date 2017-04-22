@@ -1,3 +1,7 @@
+<?php
+    include('dist/views/handle_form.php');
+    include('dist/views/partials/header.php');
+?>
 <div class="container vertical-center">
     <div class="container-login">
         <div class="signup-box">
@@ -46,3 +50,6 @@
         </div>
     </div>
 </div>
+<?php
+    include('dist/views/partials/footer.php');
+ ?>
