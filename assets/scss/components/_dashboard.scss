@@ -38,13 +38,26 @@
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                margin: 0 2rem;
+                margin: 0 2rem 5rem 2rem;
+
 
                 .product
                 {
                     background-color: $second-color;
                     padding: 1rem;
                     margin: 1rem;
+                    width: 30%;
+
+                    .product-image
+                    {
+                        width: 100%;
+
+                        img
+                        {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
 
                     .product-info
                     {
@@ -127,7 +140,7 @@
                         {
                             width: 30rem;
                         }
-                        input[id="price"], input[id="stock"]
+                        input[id="price"]
                         {
                             width: 3rem;
                         }
@@ -158,6 +171,31 @@
                     margin-right: -10px;
                 }
                 p { color: $text-light; }
+            }
+
+            .resume
+            {
+                background-color: $second-color;
+                width : 100%;
+                height : 20vh;
+                padding: 1em 3em;
+
+                h2
+                {
+                    font-weight: bold;
+                    font-size: 14px;
+                    padding: 1em 0;
+                }
+                p
+                {
+                    padding: 5px;
+
+                    .resume-link
+                    {
+                        text-decoration: underline;
+                        color: $main-color;
+                    }
+                }
             }
         }
     }

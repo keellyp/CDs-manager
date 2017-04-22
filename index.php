@@ -16,6 +16,10 @@ else if($q == 'dashboard')
 {
     $page = '_dashboard';
 }
+else if($q == 'handle_edit')
+{
+    $page = 'handle_edit';
+}
 // else if($q == 'cd')
 // {
 //     $page = '_cd';
