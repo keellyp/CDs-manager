@@ -6,12 +6,20 @@ $q = isset($_GET['q']) ? $_GET['q'] : '';
 
 if($q == '')
 {
-    $page = 'home';
+    $page = 'login';
+}
+else if($q == 'login')
+{
+    $page = 'login';
 }
 else if($q == 'dashboard')
 {
-    $page = 'dashboard';
+    $page = '_dashboard';
 }
+// else if($q == 'cd')
+// {
+//     $page = '_cd';
+// }
 else
 {
     $page = '404';

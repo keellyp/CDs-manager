@@ -1,19 +1,50 @@
-@import "components/_reset.scss";
-@import "components/_variables.scss";
+// Import tools
 
+@import 'tools/_reset.scss';
+@import 'tools/_variables.scss';
+
+// Import components
+@import 'components/_login.scss';
+@import 'components/_dashboard.scss';
+@import 'components/_inventory.scss';
+@import 'components/_disques.scss';
 
 body
 {
-    background-color: $main-color;
-    font-size: 16px;
-    color: black;
-    font-family: PlayfairDisplay;
+    background-color: $bg-color;
+    font-family: monospace;
+    color: $text-dark;
 }
 
 h1
 {
-    font-weight: 800;
-    font-size: 24px;
-    padding: 20px;
-    color: $second-color;
+    font-size: 18px;
+}
+h2
+{
+    font-size: 14px;
+}
+
+h1, h2
+{
+    font-weight: bold;
+    padding: 1.2em;
+}
+
+input[type=submit]
+{
+    background-color: $main-color;
+    color : $text-light;
+    height: initial;
+    border : thin solid $main-color;
+}
+input[type=submit]:hover
+{
+    background-color: inherit;
+    color : $main-color;
+    cursor: pointer;
+}
+input[type=text]:focus, input[type=password]:focus
+{
+    border-color: $main-color;
 }

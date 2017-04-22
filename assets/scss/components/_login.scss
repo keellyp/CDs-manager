@@ -1,0 +1,63 @@
+.container
+{
+    width: 100vw;
+    height: 100vh;
+
+    &.vertical-center
+    {
+        display: flex;
+        align-items: center;
+    }
+    .container-login
+    {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        height: 70%;
+
+        .signup-box, .signin-box
+        {
+            width: 35%;
+
+            .formulaire
+            {
+                width: 80%;
+                background-color: $second-color;
+                padding: 1rem;
+
+                p
+                {
+                    padding: 0.8rem 0;
+                    display: flex;
+                    width: 100%;
+                    align-items: baseline;
+
+                    label
+                    {
+                        flex-grow: 1;
+                    }
+                    input:not([type=submit])
+                    {
+                        flex-grow: 2;
+                    }
+                    input
+                    {
+                        border-bottom-style: inset;
+                        border-bottom-width: thin;
+                        padding: 1em;
+                    }
+                    &.submit
+                    {
+                        justify-content: flex-end;
+                    }
+                }
+
+                .error p
+                {
+                    font-style: italic;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.inventory-list
+{
+    padding: 5em;
+
+    i
+    {
+        height: 3em;
+        cursor: pointer;
+    }
+    h3
+    {
+        font-weight: bold;
+        font-size: 20px;
+        padding-bottom: 3em;
+    }
+    table
+    {
+        background-color: $text-light;
+        thead
+        {
+            td
+            {
+                font-weight: bold;
+            }
+        }
+        tr
+        {
+            height: auto;
+            width: 100vw;
+            td
+            {
+                padding: 2em;
+
+                &.small
+                {
+                    width: 5vw;
+                }
+                &.medium
+                {
+                    width: 15vw;
+                }
+                &.large
+                {
+                    width: 40vw;
+                }
+            }
+
+        }
+    }
+
+}
